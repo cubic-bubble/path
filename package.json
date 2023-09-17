@@ -1,6 +1,6 @@
 {
   "name": "@cubic-bubble/path",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Local and cloud filesystem direction path hander (Cubic+)",
   "main": "./dist/index",
   "typings": "./dist/index",
