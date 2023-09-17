@@ -3,9 +3,6 @@ import * as path from 'path';
 declare global {
     var isOncloud: () => boolean;
 }
-export declare class CloudPath {
-    constructor();
-    exists(path: string): Promise<void>;
-}
-declare const _default: path.PlatformPath | CloudPath;
+export declare function cloudPatch(): path.PlatformPath;
+declare const _default: path.PlatformPath;
 export default _default;

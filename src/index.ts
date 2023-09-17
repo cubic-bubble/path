@@ -7,17 +7,15 @@ declare global {
 global.isOncloud = () => { return process.env.MODE === 'cloud' }
 
 // Cloud based Filesystem Path Interface
-export class CloudPath {
+export function cloudPatch(){
+  /**
+   * Override path methods to adapt to cloud
+   * Eg.
+   *
+   * path.resolve = ( path, ...args ) => { ... }
+   */
 
-  constructor(){
-
-    // TODO: Define credentials & Connect to cloud space
-
-  }
-
-  async exists( path: string ){
-    console.log('Path: ', path )
-  }
+  return path
 }
 
-export default isOncloud() ? new CloudPath : path
+export default isOncloud() ? cloudPatch() : path
